@@ -1,0 +1,20 @@
+#### test ###
+麼	ma5	1%
+眭	gui4
+蜊	li4	200%
+丼	dan3
+蔔	bo1
+蔔	bo2	70%
+癖	pi4	65%
+混	hun3
+混	kun1	3%
+混	gun3	3%
+誼	yi2
+們	men2	20%
+亞	ya1	5%
+著	zhao1	0.5%
+俄	e4
+蚵	ke1
+𠀈	qiu1	0%
+綜	zong4
+姊	jie3
