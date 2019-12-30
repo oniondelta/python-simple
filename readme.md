@@ -1,4 +1,4 @@
-## Python PinYin(BPMF) Checker & Converter
+## Python PinYin (BPMF) Checker & Converter
 
 #### 〈ㄅㄆㄇㄈ〉 convert to 〈pin1 yin1〉
 #### 〈pīn yīn〉 convert to 〈pin1 yin1〉
