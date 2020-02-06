@@ -5,4 +5,4 @@
 #### ------
 #### *須開啟網路連線！
 #### *簡單寫一個程式，難免出 bug，不保證其正確性！
-#### *封裝 App (Mac Os)：https://www.dropbox.com/s/ld3ztpwgytzt25c/Exchange_Rate_in_Taiwan.app.zip?dl=0
+#### *打包好的 App (Mac Os)：https://www.dropbox.com/s/ld3ztpwgytzt25c/Exchange_Rate_in_Taiwan.app.zip?dl=0
