@@ -6,3 +6,4 @@
 #### *須開啟網路連線！
 #### *簡單寫一個程式，難免出 bug，不保證其正確性！
 #### *打包好的 App (Mac Os)：https://www.dropbox.com/s/ld3ztpwgytzt25c/Exchange_Rate_in_Taiwan.app.zip?dl=0
+![介紹1](https://raw.githubusercontent.com/oniondelta/python-simple/master/Exchange-Rate-in-Taiwan/Exchange%20Rate%20in%20Taiwan.png)
