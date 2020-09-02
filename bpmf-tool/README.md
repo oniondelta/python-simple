@@ -5,7 +5,7 @@
 
 - [pīn yīn] convert to [pin1 yin1]
 
-- Checking [pin1 yin1] spelling and context Correctness
+- Checking Correctness of [pin1 yin1] spelling and context
 
 ### Document
 
