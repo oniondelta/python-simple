@@ -1,4 +1,5 @@
-## Python PinYin( bpmf ) Checker & Converter
+# bpmf-tool
+### Python PinYin( bpmf ) Checker & Converter
 
 - 〈ㄅㄆㄇㄈ〉 convert to 〈pin1 yin1〉
 
