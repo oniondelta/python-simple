@@ -4,7 +4,7 @@
 
 - input_retain.txt 輸入欲處理之詞條文件
 
-- retain_list.txt 輸入欲保留含有某「字詞」的詞條（ python 列表 list 格式 ）
+- retain_list.txt 輸入欲保留含有某「字詞」的詞條（ Python 列表 List 格式 ）
 
 ### 執行後產生：
 
