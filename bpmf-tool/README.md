@@ -1,11 +1,11 @@
 # bpmf-tool
 ### Python PinYin( bpmf ) Checker & Converter
 
-- [ㄅㄆㄇㄈ] convert to [pin1 yin1]
+- [ ㄅㄆㄇㄈ ] convert to [ pin1 yin1 ]
 
-- [pīn yīn] convert to [pin1 yin1]
+- [ pīn yīn ] convert to [ pin1 yin1 ]
 
-- Checking Correctness of [pin1 yin1] spelling and context
+- Checking Correctness of [ pin1 yin1 ] spelling and context
 
 ### Document
 
