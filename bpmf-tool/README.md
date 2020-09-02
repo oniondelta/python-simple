@@ -9,10 +9,10 @@
 
 ### Document
 
-- <cpy.txt> for <check_pinyin.py>
+- < cpy.txt > for < check_pinyin.py >
 
-- <input_bpm.txt> for <conversion_bpmf_to_pinyin.py >
+- < input_bpm.txt > for < conversion_bpmf_to_pinyin.py >
 
-- <input_pinyin.txt>  for <conversion_pinyin_to_pinyin.py>
+- < input_pinyin.txt >  for < conversion_pinyin_to_pinyin.py >
 
 #### according to Rime input method form
