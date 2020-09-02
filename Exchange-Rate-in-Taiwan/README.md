@@ -1,6 +1,4 @@
-# Exchange-Rate-in-Taiwan
-
-### 臺灣銀行匯率轉換 Exchange Rate in Taiwan
+# Exchange-Rate-in-Taiwan（臺灣銀行匯率轉換）
 
 ### 資料來源：
 - 臺灣銀行網站：https://rate.bot.com.tw/xrt?Lang=zh-TW
