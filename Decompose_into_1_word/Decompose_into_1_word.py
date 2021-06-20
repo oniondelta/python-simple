@@ -1,4 +1,5 @@
 
+#讀入檔案
 with open("input_multiple_word.txt",mode="r",encoding="utf-8") as infile:
     cw=infile.read()
 
@@ -8,7 +9,7 @@ cw=re.sub(r"[#].*\n",r"\n",cw) #刪除句首井字註解
 cw=re.sub(r"\t[0-9\.]+%?",r"",cw) #刪除句尾詞頻
 cw=re.sub(r"\t[0-9\.]+%?$",r"",cw) #刪除句尾詞頻
 cw=re.sub(r"(\n)+",r"\n",cw) #去掉空白行
-cw=re.sub(r'[ ]',r'@', cw) #把空格轉成「@」，讓下方顯示較清晰
+cw=re.sub(r'[ ]',r'@', cw) #把空格轉成「@」，顯示和查詢較清晰
 
 cw=cw.split('\n')
 
@@ -35,8 +36,19 @@ cw=[re.sub(r'^(.)(.)(.)(.)(.)(.)(.)(.)(.)(.)(.)\t([^@]+)[@]([^@]+)[@]([^@]+)[@](
 # 12字詞
 cw=[re.sub(r'^(.)(.)(.)(.)(.)(.)(.)(.)(.)(.)(.)(.)\t([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)[@]([^@]+)', r'\1\t\13\n\2\t\14\n\3\t\15\n\4\t\16\n\5\t\17\n\6\t\18\n\7\t\19\n\8\t\20\n\9\t\21\n\10\t\22\n\11\t\23\n\12\t\24', ii) for ii in cw]
 
+
 cw="\n".join(cw)
 # print(cw)
 
+#去除重複（字典方式，不變動順序）
+cw=cw.split('\n')
+def dictWay2(cw):
+    d = {}
+    for i in cw:
+        d[i] = None
+    return list(d.keys())
+cw="\n".join(dictWay2(cw))
+
+#輸出 .txt 檔案
 with open("output_1_word.txt",mode="w",encoding="utf-8") as outfile:
     outfile.write(cw)
