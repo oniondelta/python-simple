@@ -1,7 +1,7 @@
 
 #讀入檔案
-with open("input_single_word.txt",mode="r",encoding="utf-8") as alonefile:
-    cw_s=alonefile.read()
+with open("input_single_word.txt",mode="r",encoding="utf-8") as in_s_file:
+    cw_s=in_s_file.read()
 
 with open("input_multiple_word.txt",mode="r",encoding="utf-8") as infile:
     cw=infile.read()
