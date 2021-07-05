@@ -1,7 +1,15 @@
 
 #讀入檔案
+with open("input_single_word.txt",mode="r",encoding="utf-8") as alonefile:
+    cw_s=alonefile.read()
+
 with open("input_multiple_word.txt",mode="r",encoding="utf-8") as infile:
     cw=infile.read()
+
+
+# 合併兩個 txt 檔案（一個純單字，一個詞句）
+cw = cw_s + '\n' +cw
+
 
 import re
 
