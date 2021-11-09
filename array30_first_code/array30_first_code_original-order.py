@@ -45,6 +45,7 @@ def S_dict(listA,dictA):
         try:
             d[i] = dictA[i]
             # print(d)
+            # print('測試')
         except KeyError:
             d[i] = None
             del d[i]
