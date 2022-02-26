@@ -1,4 +1,4 @@
-# Conversion_jp_kanna/
+# Conversion_jp_kanna
 
 ### 轉換日文羅馬拼音到平假名：
 
