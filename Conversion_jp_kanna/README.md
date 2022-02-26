@@ -6,4 +6,4 @@
 
 ### 執行後產生：
 
-- output_jp_kanna.txt 執行後產生平假名轉換之文件
+- output_jp_kanna.txt 轉換平假名後之文件
