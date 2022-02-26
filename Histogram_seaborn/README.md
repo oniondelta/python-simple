@@ -6,6 +6,6 @@
 
 ### 執行後產生：
 
-- out_number.txt 產生數值運算後之文件
+- out_number.txt 數值運算後之文件
 
 - 跑出直方圖
