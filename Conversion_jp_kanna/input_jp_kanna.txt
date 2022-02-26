@@ -1,0 +1,8 @@
+左治木	sajiki;
+妄言	mougen;	24
+妄言	bougen;	24
+及川	oikawa;	155
+及川	oyokawa;	155
+定年	teinen;	832
+細工	zaiku;	310
+細工	saiku;	310
