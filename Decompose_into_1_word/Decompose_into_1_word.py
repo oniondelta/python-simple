@@ -3,12 +3,15 @@
 with open("input_single_word.txt",mode="r",encoding="utf-8") as in_s_file:
     cw_s=in_s_file.read()
 
-with open("input_multiple_word.txt",mode="r",encoding="utf-8") as infile:
-    cw=infile.read()
+with open("input_multiple_word_1.txt",mode="r",encoding="utf-8") as infile:
+    cw1=infile.read()
+
+with open("input_multiple_word_2.txt",mode="r",encoding="utf-8") as infile:
+    cw2=infile.read()
 
 
-# 合併兩個 txt 檔案（一個純單字，一個詞句）
-cw = cw_s + '\n' +cw
+# 合併三個 txt 檔案（一個純單字，一個詞句）
+cw = cw_s + '\n' +cw1 + '\n' +cw2
 
 
 import re
