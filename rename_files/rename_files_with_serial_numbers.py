@@ -29,7 +29,7 @@ def run_rename_sn():
         path_r = "./rename_files/"
         f_r = os.listdir(path_r)
 
-        print("修改檔名開始：")
+        print("《修改檔名開始》：")
         n = 0
         for i in f_r:
             # 設定舊檔名

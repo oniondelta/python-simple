@@ -20,7 +20,7 @@ def run_rename_re():
 # input_pattern = '(CST_)(.+)_(\d+)(\.)'
 # rename_pattern = '\1\3\2\4'
 ####################################################################
-    print("修改檔名開始：")
+    print("《修改檔名開始》：")
     for old_name in f_r:
         # 正則修改檔名
         # new_name = re.sub(input_pattern, rename_pattern, old_name)
