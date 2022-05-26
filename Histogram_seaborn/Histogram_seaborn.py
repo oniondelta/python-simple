@@ -1,6 +1,10 @@
 import numpy as np
+
 # import matplotlib as mpl
+# import matplotlib  #如果無法顯示圖片開啟此條和下一條
+# matplotlib.use('qt5agg')  #如果無法顯示圖片開啟此條和上一條
 import matplotlib.pyplot as plt
+
 import seaborn as sns
 # import statistics
 
