@@ -23,10 +23,10 @@ def run_rename_sn():
 
     if check_ok == False:
         # 保險起見，檔案複製到新資料夾再作重命名修改
-        shutil.copytree('./original_files/', './rename_files/')
+        shutil.copytree('./original_files/', './rename_files_sn/')
 
         # 獲取該目錄下所有檔案，存入列表中
-        path_r = "./rename_files/"
+        path_r = "./rename_files_sn/"
         f_r = os.listdir(path_r)
 
         print("《修改檔名開始》：")
@@ -46,7 +46,7 @@ def run_rename_sn():
 
 def main():
     # 檢查資料夾是否存在
-    folder_path = "./rename_files/"
+    folder_path = "./rename_files_sn/"
     result = os.path.isdir(folder_path)
     # print(result)
 
@@ -54,7 +54,7 @@ def main():
         run_rename_sn()
 
     else:
-        print("「rename_files」資料夾已經存在")
+        print("「rename_files_sn」資料夾已經存在")
 
 
 
