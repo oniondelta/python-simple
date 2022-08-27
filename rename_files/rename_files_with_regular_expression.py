@@ -16,16 +16,21 @@ def run_rename_re():
     # print("測試檔名擷取：" ,f_r[0])
 
 ####################################################################
-# 正則替換修改處(會有問題！)：
-# input_pattern = '(CST_)(.+)_(\d+)(\.)'
-# rename_pattern = '\1\3\2\4'
+# 正則替換修改處(須為 r'正則表達式' ，否則會有問題！)：
+
+    input_pattern = r'(CST_)(.+)_(\d+)(\.)'
+    rename_pattern = r'\1\3_\2\4'
+
+    # input_pattern = r'\.json］'
+    # rename_pattern = r'.json'
 ####################################################################
     print("《修改檔名開始》：")
     for old_name in f_r:
         # 正則修改檔名
-        # new_name = re.sub(input_pattern, rename_pattern, old_name)
-        # new_name = re.sub(input_pattern, r'\1\3_\2\4', old_name)
-        new_name = re.sub(r'(CST_)(.+)_(\d+)(\.)', r'\1\3_\2\4', old_name)
+        new_name = re.sub(input_pattern, rename_pattern, old_name)
+
+        # new_name = re.sub(r'(CST_)(.+)_(\d+)(\.)', r'\1\3_\2\4', old_name)
+        # new_name = re.sub(r'\.json］', r'.json', old_name)
 
         # 用os模組中的rename方法對檔案改名（路徑+檔名）
         os.rename(path_r+old_name, path_r+new_name)
