@@ -2,6 +2,7 @@
 
 import os
 import glob
+import shutil
 from PIL import Image
 
 
@@ -32,20 +33,34 @@ def checksize():
         elif size[1]>max:
             imgresize(max,size,im,name)
         else:
-            im.save(f'./resize_max_out/{name}')
-
+            im.save(f'./resize_max_out_i/{name}')  # 因解譯後另存，尺寸不變，但會改變檔案容量大小（畫質清晰度會變差）！
+            shutil.copyfile(f"./resize_in/{name}", f"./resize_max_out_o/{name}")  # 直接複製過去，尺寸和檔案容量大小不變！
 
 class main():
     # 檢查資料夾是否存在
     folder_path = "./resize_max_out/"
+    folder_path1 = "./resize_max_out_o/"
+    folder_path2 = "./resize_max_out_i/"
     result = os.path.isdir(folder_path)
+    result1 = os.path.isdir(folder_path1)
+    result2 = os.path.isdir(folder_path2)
     # print(result)
-    if result == False:
+    # if result == False:
+    #     # 建立資料夾
+    #     os.mkdir("./resize_max_out/")
+    #     checksize()
+    if result == False and result1 == False and result2 == False:
         # 建立資料夾
         os.mkdir("./resize_max_out/")
+        os.mkdir("./resize_max_out_o/")
+        os.mkdir("./resize_max_out_i/")
         checksize()
+        print("完成！")
+        print("「resize_max_out」有縮減尺寸之圖檔")
+        print("「resize_max_out_o」無縮減尺寸之圖檔：直接原檔複製，檔案容量畫質不變！")
+        print("「resize_max_out_i」無縮減尺寸之圖檔：因解譯另存，檔案容量變小，畫質變差！")
     else:
-        print("「resize_max_out」資料夾已經存在\n！！！終止執行！！！")
+        print("「resize_max_out」三個資料夾之一已存在\n！！！終止執行！！！")
 
 
 if __name__ == "__main__":
