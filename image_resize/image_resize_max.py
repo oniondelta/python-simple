@@ -19,6 +19,10 @@ def imgresize(max,size,im,name):
         w = int(max*scale)       # 設定調整後的寬度為 max 乘以 scale ( 使用 int 去除小數點 )
         h = max                  # 設定調整後的高度為最大的數值
     im2 = im.resize((w, h))      # 調整尺寸
+    # im2 = im.resize((w, h), Image.Resampling.BICUBIC)      # 調整尺寸
+    # im2 = im.resize((w, h), Image.Resampling.NEAREST)      # 調整尺寸
+    # im2 = im.resize((w, h), Image.Resampling.BILINEAR)      # 調整尺寸
+    # im2 = im.resize((w, h), Image.Resampling.LANCZOS)      # 調整尺寸
     im2.save(f'./resize_max_out/{name}')
 
 def checksize():
@@ -34,6 +38,8 @@ def checksize():
             imgresize(max,size,im,name)
         else:
             im.save(f'./resize_max_out_i/{name}')  # 因解譯後另存，尺寸不變，但會改變檔案容量大小（畫質清晰度會變差）！
+            # im.save(f'./resize_max_out_i/{name}', quality=85)  # 因解譯後另存，尺寸不變，但會改變檔案容量大小（畫質清晰度會變差）！
+            # im.save(f'./resize_max_out_i/{name}',quality=80, subsampling=0)  # 因解譯後另存，尺寸不變，但會改變檔案容量大小（畫質清晰度會變差）！
             shutil.copyfile(f"./resize_in/{name}", f"./resize_max_out_o/{name}")  # 直接複製過去，尺寸和檔案容量大小不變！
 
 class main():
