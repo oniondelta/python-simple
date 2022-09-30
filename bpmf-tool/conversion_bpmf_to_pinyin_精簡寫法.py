@@ -5,7 +5,7 @@ with open("input_bpm.txt",mode="r",encoding="utf-8") as infile:
 
 import re
 
-wc=re.sub(r"([ㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])(\s)",r"\1@1\2",word)
+wc=re.sub(r"([ㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])(\s|$)",r"\1@1\2",word)
 wc=re.sub(r"[@][1]|ˉ",r"1",wc)
 bpmf={"ˊ":"2","ˇ":"3","ˋ":"4","˙":"5"}
 for b in bpmf.keys():
