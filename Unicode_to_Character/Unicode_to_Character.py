@@ -1,11 +1,11 @@
-import json
+# import json
 
 class unicode_to_character():
     with open("input_unicode.txt",mode="r",encoding="utf-8") as infile:
         unicodeword=infile.read()
 
-        # unicodeword = unicodeword.replace('\n', '\\n')
         unicodeword = unicodeword.replace('\\\\', '\\')
+        # unicodeword = unicodeword.replace('\n', '\\n')
         # unicodeword = eval(unicodeword)
 
         # print(unicodeword)
