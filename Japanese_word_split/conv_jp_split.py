@@ -11,9 +11,9 @@ l1=l1.split('\n')
 #print(l1)
 
 
-
 # j1=re.compile(r'([あいうえおゐゑぁぃぅぇぉかきくけこがぎぐげごゕゖさしすせそざじずぜぞたちつてとだぢづでどっなにぬねのはひふへほばびぶべぼゔぱぴぷぺぽまみむめもやゆよゃゅょらりるれろわをんゎ])') #ー
 # j2=re.compile(r'([アイウエオヰヱァィゥェォカキクケコガギグゲゴヵヶサシスセソザジズゼゾタチツテトダヂヅデドッナニヌネノハヒフヘホバビブベボヴパピプペポマミムメモヤユヨャュョラリルレロワヲンヮ])') #ー
+
 
 for index, ii in enumerate(l1):
   # 変換フォーズ1  ex. 「あ」→「a」、「りゅ」→「ryu」
@@ -205,7 +205,6 @@ for index, ii in enumerate(l1):
   l1[index]=ii
 
 
-
 # l1=[re.sub(j1,r' \1, ',ii) for ii in l1]
 # l1=[re.sub(j2,r' \1. ',ii) for ii in l1]
 # l1=[re.sub(r' +',r' ',ii) for ii in l1]
@@ -229,7 +228,6 @@ for index, ii in enumerate(l1):
   # elif re.match(r"^([^a-z]+)([a-z]+)([^a-z]+)\t.+\2.+$", ii):
   #   ii = re.sub(r"^([^a-z]+)([a-z]+)([^a-z]+)(\t.+)(\2)(.+)$",r'\1\2\3\4; \5 \6;',ii)
   #   l1[index]=ii
-
 
 
 #print(l1)

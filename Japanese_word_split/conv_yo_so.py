@@ -1,3 +1,4 @@
+### 依據方案正則轉換促音和拗音，供比對
 
 # import jaconv
 import convrules_onion
@@ -10,13 +11,14 @@ with open("input_yo_so.txt",mode="r",encoding="utf-8") as infile:
 l1=l1.split('\n')
 #print(l1)
 
+
 # j1=re.compile(r'([あいうえおゐゑぁぃぅぇぉかきくけこがぎぐげごゕゖさしすせそざじずぜぞたちつてとだぢづでどっなにぬねのはひふへほばびぶべぼゔぱぴぷぺぽまみむめもやゆよゃゅょらりるれろわをんゎ])') #ー
 # j2=re.compile(r'([アイウエオヰヱァィゥェォカキクケコガギグゲゴヵヶサシスセソザジズゼゾタチツテトダヂヅデドッナニヌネノハヒフヘホバビブベボヴパピプペポマミムメモヤユヨャュョラリルレロワヲンヮ])') #ー
+
 
 for index, ii in enumerate(l1):
 
   ### 漢字促音 ###
-
   ii=re.sub(r"c([.,]chi)", r"q\1",ii)
   ii=re.sub(r"s([.,]shi)", r"q\1",ii)
   ii=re.sub(r"f([.,]fu)", r"q\1",ii)
@@ -93,7 +95,6 @@ for index, ii in enumerate(l1):
   ii=re.sub(r"b(b)([auoie])([.,])", r"q\3 \1\2\3",ii)
 
   ### 假名中拗音 ###
-
   ii=re.sub(r"(ky)([auo])([.,])", r"ki\3 xy\2\3",ii)
   ii=re.sub(r"(gy)([auo])([.,])", r"gi\3 xy\2\3",ii)
   ii=re.sub(r"(sh)([auo])([.,])", r"shi\3 xy\2\3",ii)
@@ -109,6 +110,7 @@ for index, ii in enumerate(l1):
 
 
   l1[index]=ii
+
 
 #print(l1)
 strout="\n".join(l1)
