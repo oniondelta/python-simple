@@ -121,6 +121,7 @@ def REPLACE_GKK_KANA(outlist, index, inline):
   inline=re.sub(r"ts([oeia])([.,])", r"tsu\2 x\1\2", inline) #つぉ、つぇ、つぃ、つぁ
   inline=re.sub(r"sy(i)([.,])", r"shi\2 x\1\2", inline) #しぃ
   inline=re.sub(r"gw([auoei])([.,])", r"gu\2 x\1\2", inline) #ぐゎ、ぐぅ、ぐぉ、ぐぇ、ぐぃ
+  inline=re.sub(r"dw([auoei])([.,])", r"do\2 x\1\2", inline) #どぁ、どぅ、どぉ、どぇ、どぃ
   inline=re.sub(r"wh([auoei])([.,])", r"u\2 x\1\2", inline) #うぁ、うぅ、うぉ、うぇ、うぃ
 
   outlist[index]=inline
