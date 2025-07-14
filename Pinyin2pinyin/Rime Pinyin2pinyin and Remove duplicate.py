@@ -35,6 +35,7 @@ wc=re.sub(r"([a-z]*)ǜ([a-z]*)",r"\1v\2@@@@",wc)
 wc=re.sub(r"ü",r"v",wc)
 
 wc=re.sub(r"([a-z]+)(\s)",r"\1@@@@@\2",wc)
+wc=re.sub(r"([a-z]+)$",r"\1@@@@@",wc)
 wc=re.sub(r"@@@@@",r"5",wc)
 wc=re.sub(r"@@@@",r"4",wc)
 wc=re.sub(r"@@@",r"3",wc)
