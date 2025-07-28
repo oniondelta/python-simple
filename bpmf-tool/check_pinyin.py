@@ -18,10 +18,10 @@ statement='''
 print(statement)
 
 wc=re.sub(r"[#].*\n",r"\n",wc) #刪除句首井字註解
-wc=re.sub(r"	[0-9\.]+%(\n)",r"\1",wc) #刪除句尾詞頻
+wc=re.sub(r"\t[0-9\.]+%(\n)",r"\1",wc) #刪除句尾詞頻
 
 
-pattern=re.compile(r'\d\d|[	 ][	 ]')
+pattern=re.compile(r'\d\d|[\t ][\t ]')
 search=pattern.search(wc)
 if search:
     print(">>《 錯碼！》有〔數字〕〔空格〕重複兩個以上>>",pattern.findall(wc)) #search #.group()
@@ -35,7 +35,7 @@ if search:
 else:
     print("《 正確！》無〔數字〕前接〔空格〕〔換行符〕或在行首")
 
-pattern=re.compile(r'[a-z]\s|[	 ]\n')
+pattern=re.compile(r'[a-z]\s|[\t ]\n')
 search=pattern.search(wc)
 if search:
     print(">>《 錯碼！》有〔英文〕後接〔空格〕〔換行符〕或句尾有〔空格〕>>",pattern.findall(wc)) #search #.group()
@@ -72,7 +72,7 @@ else:
 #    print("《 正確！》無錯誤的〔拼音〕二")
 
 
-wc=re.sub(r"([	 ])r5",r"\1er5",wc) #刪除「兒」(r5)
+wc=re.sub(r"([\t ])r5",r"\1er5",wc) #刪除「兒」(r5)
 ## 以下特殊拼音，可斟酌遮屏
 wc=re.sub(r"fiao4",r"",wc) #（覅 fiao4 ㄈㄧㄠˋ）教育部詞典 特殊發音
 wc=re.sub(r"zhei4",r"",wc) #（這 zhei4 ㄓㄟˋ）教育部詞典 特殊發音
@@ -130,7 +130,7 @@ wc=re.sub(r"[dtnlgkhrzcsy]ong[12345]",r"",wc)
 wc=re.sub(r"[pmfdtnlgkhrzcsy]?ou[12345]",r"",wc)
 wc=re.sub(r"[bpmfyw]?o[12345]",r"",wc)
 
-wc=re.sub(r"[	 ]",r"",wc)
+wc=re.sub(r"[\t ]",r"",wc)
 pattern=re.compile(r'[\w]*[a-z0-9]+') #[^a-z0-9\s]
 search=pattern.search(wc)
 if search:
