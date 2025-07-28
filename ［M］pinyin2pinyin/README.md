@@ -1,4 +1,4 @@
-# Pinyin2pinyin
+# ［M］pinyin2pinyin
 
 ### 轉換帶調拼音把其聲調移至後方：
 
@@ -10,6 +10,6 @@
 
 ### 執行後產生：
 
-- py2py_ok.txt 拼音轉拼音之文件
+- ok_py2py.txt 拼音轉拼音之文件
 
-- output_pinyin_finish.txt 最後去重之文件
+- output_finish-py2py_rd5.txt 最後去重之文件

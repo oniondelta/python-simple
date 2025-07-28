@@ -14,34 +14,39 @@
 
 
 # 使用模組 module
-from py2py_rd5_cpy_modules.iof import IOfile
-from py2py_rd5_cpy_modules.py2py import Pinyin2Pinyin
-from py2py_rd5_cpy_modules.rd5 import RemoveDuplicate5
-from py2py_rd5_cpy_modules.ckpy import CheckPinyin
+from bp2py_modules.iof import IOfile
+from bp2py_modules.bp2py import Bpmf2Pinyin
+# from bp2py_modules.bp2py_old import Bpmf2PinyinOld
+from bp2py_modules.rd5 import RemoveDuplicate5
+from bp2py_modules.ckpy import CheckPinyin
 
 # # 原設定檔案名稱
 # input_1="input_pinyin2pinyin.txt"
 # output_1="output_pinyin2pinyin.txt"
 # output_2="output_pinyin2pinyin.txt"
 # 設定檔案名稱
-input_1="input_pinyin.txt"
-output_1="py2py_ok.txt"
-output_2="output_pinyin_finish.txt"
+input_1="input_bpmf.txt"
+output_1="ok_bp2py.txt"
+output_2="output_finish-bp2py_rd5.txt"
 
 # 匯入名稱並執行
 wc=IOfile.input_file(input_1)
 
-wc=Pinyin2Pinyin.run_code(wc)
+wc=Bpmf2Pinyin.run_code(wc)
 IOfile.output_file(output_1,wc)
 
-wc=RemoveDuplicate5.run_code(wc)
-IOfile.output_file(output_2,wc)
+# wc=Bpmf2PinyinOld.run_code(wc)
+# IOfile.output_file(output_1,wc)
+
+# wc=RemoveDuplicate5.run_code(wc)
+# IOfile.output_file(output_2,wc)
 
 CheckPinyin.run_code(wc)
 wc=None
 # print(wc)
 
-# run1=Pinyin2Pinyin(input_1,output_1)
+# run1=Bpmf2Pinyin(input_1,output_1)
+# run1=Bpmf2PinyinOld(input_1,output_1)
 # run2=RemoveDuplicate5(output_1,output_2)
 # run3=CheckPinyin(output_2)
 # run1.run_code()

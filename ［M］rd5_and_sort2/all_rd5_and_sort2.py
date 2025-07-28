@@ -20,8 +20,8 @@ from rd5_and_sort2_modules.sort2 import SortByWordCount2
 
 # 設定檔案名稱
 input_1="input_dict.txt"
-output_1="rd_ok.txt"
-output_2="output_finish.txt"
+output_1="ok_rd5.txt"
+output_2="output_finish-rd5_sort2.txt"
 
 # 匯入名稱並執行
 wc=IOfile.input_file(input_1)
