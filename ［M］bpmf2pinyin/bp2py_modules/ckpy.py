@@ -87,13 +87,16 @@ class CheckPinyin():
         wc=re.sub(r"fiao4",r"",wc) #（覅 fiao4 ㄈㄧㄠˋ）教育部詞典 特殊發音
         wc=re.sub(r"zhei4",r"",wc) #（這 zhei4 ㄓㄟˋ）教育部詞典 特殊發音
         #wc=re.sub(r"due3",r"",wc) ###（打了個盹兒 due3 ㄉㄨㄜˇ）教育部詞典 變音發音
-        wc=re.sub(r"[dt]in4",r"",wc) ###（𨈖 din4 ㄉㄧㄣˋ）（朩 tin4 ㄊㄧㄣˋ）網路詞典 特殊發音
+        wc=re.sub(r"din4",r"",wc) ###（𨈖 din4 ㄉㄧㄣˋ）網路詞典 特殊發音
+        wc=re.sub(r"tin1",r"",wc) ###（朩 tin1 ㄊㄧㄣ）(原本標 tin4 ㄊㄧㄣˋ)網路詞典 特殊發音
         wc=re.sub(r"nui2",r"",wc) #（挼捼 nui2 ㄋㄨㄟˊ）教育部詞典 特殊發音
         wc=re.sub(r"nia1",r"",wc) ###（㖸 nia1 ㄋㄧㄚ）網路詞典 特殊發音
         wc=re.sub(r"cei4",r"",wc) ###（𤭢 cei4 ㄘㄟˋ）網路詞典 特殊發音
         wc=re.sub(r"kei1",r"",wc) ###（剋 kei1 ㄎㄟ）網路詞典 特殊發音
         wc=re.sub(r"sei1",r"",wc) #（塞 sei1 ㄙㄟ）教育部詞典 特殊發音
-        wc=re.sub(r"lo5",r"",wc) #（lo5 ㄌㄛ˙）教育部詞典 特殊發音
+        wc=re.sub(r"lo5",r"",wc) #（咯 lo5 ㄌㄛ˙）教育部詞典 特殊發音
+        wc=re.sub(r"rua2",r"",wc) #（挼 nua2 ㄖㄨㄚˊ）網路詞典 特殊發音
+        #wc=re.sub(r"ra1",r"",wc) #（罖 ra1 ㄖㄚ）網路詞典 特殊發音
 
         ## 一般拼音
         wc=re.sub(r"[zcs]huang[12345]",r"",wc)
@@ -120,7 +123,8 @@ class CheckPinyin():
         wc=re.sub(r"[dtnlgkhjqxrzcsy]uan[12345]",r"",wc)
         wc=re.sub(r"[gkh]uai[12345]",r"",wc)
         wc=re.sub(r"[gkhzcs]ua[12345]",r"",wc)
-        wc=re.sub(r"[dtnlgkhxrzcs]uo[12345]",r"",wc)
+        wc=re.sub(r"[dtnlgkhxzcs]uo[12345]",r"",wc)
+        wc=re.sub(r"[r]uo[24]",r"",wc) #（若弱 ㄖㄨㄛˋ）（挼捼 ㄖㄨㄛˊ）教育部詞典
         wc=re.sub(r"[dtnlgkhjqxrzcsy]un[12345]",r"",wc)
         wc=re.sub(r"[dtgkhrzcsw]ui[12345]",r"",wc)
         wc=re.sub(r"[jqxy]ue[12345]",r"",wc)
